@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudoKu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="loading-wrapper none-display">
+        <div class="loading">
+            <div class="ball ball1"></div>
+            <div class="ball ball2"></div>
+            <div class="ball ball3"></div>
+            <div class="ball ball4"></div>
+        </div>
+    </div>
+
+    <h1>Welcome User!</h1>
+    <div class="choose">
+        <div class ="difficulty hide-after-selection">choose difficulty</div>
+        <div>
+            <button onclick="retry()" class="retry">&#8634;</button>
+        </div>
+    </div>
+    <button class="finish-btn none-display" onclick ='checkGame()'>Finish</button>
+    <div class="difficulty-select hide-after-selection">
+        <label class="easy-label" for="easy" ><span>easy</span>
+            <input type="radio" onclick="updateGameLevel(0.75)" name="difficuly" id="easy">
+        </label>
+        <label class = "medium-label" for="medium"> <span>medium</span>
+            <input type="radio"  onclick = 'updateGameLevel(0.5)' name="difficuly" id="medium">
+        </label>
+        <label class="hard-label" for="hard" ><span>hard</span>
+            <input type="radio" onclick = 'updateGameLevel(0.25)' name="difficuly" id="hard">
+        </label>
+    </div>
+    <!-- <button onclick="stopTimer()">stahp</button> -->
+        
+    <div class="game-container">
+        <div class="board">
+            <table>
+                <tbody class='game-board'>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="result none-display"></div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
